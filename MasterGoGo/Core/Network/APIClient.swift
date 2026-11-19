@@ -4,7 +4,7 @@ protocol APIClient {
     func data(endpoint: APIEndpoint) async throws -> Data
 }
 
-enum APIEndpoint {
+enum APIEndpoint: Hashable {
     case health
     case content
     case section(String)
